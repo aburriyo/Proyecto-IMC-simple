@@ -10,24 +10,37 @@
 
 </head>
 <body>
-    <h1 class="titulo">Calculadora IMC</h1>
-            
-    <form action="" class="form-inline">
-    <div class="form-group mb-2">
-        <label for="peso" class="form-label">Peso</label> 
-        <input type="text" name="peso" placeholder="Ingrese peso" id="txtPeso" class = "from-control">
-    </div> 
-
-        <br>
-    <div class = "form-group mb-2">    
-        <label for="altura" class="form-label">Altura</label> 
-        <input type="text" name="altura" placeholder="Ingrese altura" id="txtAltura" class="from-control">
-    </div>
-        <br>
-        <button type="submit" class="btn btn-primary mb-2">Calcular</button>
+    <form>
+        <div class="bmi-calculator">
+          <h1>Calculadora IMC</h1>
+          <div class="bmi-calculator-weight">
+                <input id="sliderWeight" class="weight-slider form-range" type="range" min="25" max="180" value="60"/>
+                    <p>Peso:
+                <input id="weightOutput" class="inputNumber" type="number" value="60" min="25" max="180" oninput="showValueWeight(this.value)"/>
+                    <span>Kg</span> 
+                    </p>
+          </div> 
+          <div class="bmi-calculator-height">
+                <input id="sliderHeight" class="height-slider form-range" type="range" value="120" min="80" max="250"/>
+                    <p>Altura:
+                <input id="heightOutput" class="inputNumber" type="number" value="120" min="80" max="250" oninput="showValueHeight(this.value)"/>
+                    <span>cm</span>
+                    </p>
+          </div>
+                <input id="btenCalcular" class="button btn btn-lg btn-primary" type="button" value="Calcular"/>
+          <div id="imc">  
+            <p> -- </p>
+           </div>
+           
+        </div>
     </form>
+
+    <div class="selector">
+
+    </div>
 <script src="script.js"></script>    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+ integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>
 </html>
